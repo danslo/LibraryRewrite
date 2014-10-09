@@ -49,7 +49,7 @@ Registering rewrites
 
 1. Create an ordinary Magento module that depends on ``Danslo_LibraryRewrite``.
 2. In your ``config.xml``, add something like:
-```
+```xml
 <?xml version="1.0"?>
 <config>
     <global>
@@ -63,7 +63,7 @@ Registering rewrites
 ```
 3. Create a file in ``app/code/<YourCodePool>/<YourNamespace>/<YourModule>/lib/<PathToTheLibrary>``.
 4. The contents of the class should itself live in global namseapce extend from the Magento namespace:
-```
+```php
 <?php
 
 class The_Library_Class_To_Rewrite extends Magento\The_Library_Class_To_Rewrite
