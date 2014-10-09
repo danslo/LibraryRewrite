@@ -24,23 +24,22 @@ Installing
 
 1. If composer is not already installed, [do so](https://getcomposer.org/download/).
 2. Create a ``composer.json`` with the following (or similar) contents:
-```json
-{
-    "require": {
-        "danslo/libraryrewrite": "dev-master"
-    },
-    "minimum-stability": "dev",
-    "extra": {
-        "magento-root-dir": "."
-    },
-    "repositories": [
+
         {
-            "type": "vcs",
-            "url": "https://github.com/danslo/LibraryRewrite.git"
+            "require": {
+                "danslo/libraryrewrite": "dev-master"
+            },
+            "minimum-stability": "dev",
+            "extra": {
+                "magento-root-dir": "."
+            },
+            "repositories": [
+                {
+                    "type": "vcs",
+                    "url": "https://github.com/danslo/LibraryRewrite.git"
+                }
+            ]
         }
-    ]
-}
-```
 
 Finally, issue the ``composer install`` command.
 
@@ -49,28 +48,28 @@ Registering rewrites
 
 1. Create an ordinary Magento module that depends on ``Danslo_LibraryRewrite``.
 2. In your ``config.xml``, add something like:
-```xml
-<?xml version="1.0"?>
-<config>
-    <global>
-        <libraries>
-            <rewrite>
-                <The_Library_Class_To_Rewrite>YourNamespace_YourModule</The_Library_Class_To_Rewrite>
-            </rewrite>
-        </libraries>
-    </global>
-</config>
-```
+
+        <?xml version="1.0"?>
+        <config>
+            <global>
+                <libraries>
+                    <rewrite>
+                        <The_Library_Class_To_Rewrite>YourNamespace_YourModule</The_Library_Class_To_Rewrite>
+                    </rewrite>
+                </libraries>
+            </global>
+        </config>
+
 3. Create a file in ``app/code/<YourCodePool>/<YourNamespace>/<YourModule>/lib/<PathToTheLibrary>``.
 4. The contents of the class should itself live in global namseapce extend from the Magento namespace:
-```php
-<?php
+    
+        <?php
+        
+        class The_Library_Class_To_Rewrite extends Magento\The_Library_Class_To_Rewrite
+        {
+            // Rewrite any method in here.
+        }
 
-class The_Library_Class_To_Rewrite extends Magento\The_Library_Class_To_Rewrite
-{
-    // Rewrite any method in here.
-}
-```
 
 License
 -------
