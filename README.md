@@ -24,7 +24,6 @@ Installing
 
 1. If composer is not already installed, [do so](https://getcomposer.org/download/).
 2. Create a ``composer.json`` with the following (or similar) contents:
-
 ```
 {
     "require": {
@@ -42,7 +41,6 @@ Installing
     ]
 }
 ```
-
 3. Issue the ``composer install`` command.
 
 Registering rewrites
