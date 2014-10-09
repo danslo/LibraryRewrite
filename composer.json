@@ -1,0 +1,20 @@
+{
+    "name": "danslo/libraryrewrite",
+    "license": "MIT",
+    "type": "magento-module",
+    "description": "",
+    "authors": [
+        {
+            "name": "Daniel Sloof"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://packages.firegento.com"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Danslo_LibraryRewrite>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Danslo_LibraryRewrite>
+    </modules>
+</config>

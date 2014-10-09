@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <models>
+            <extender>
+                <class>Danslo_LibraryRewrite_Model</class>
+            </extender>
+        </models>
+        <events>
+            <resource_get_tablename>
+                <observers>
+                    <add_autoloader>
+                        <class>Danslo_LibraryRewrite_Model_Observer</class>
+                        <method>addAutoloader</method>
+                    </add_autoloader>
+                </observers>
+            </resource_get_tablename>
+        </events>
+    </global>
+</config>
