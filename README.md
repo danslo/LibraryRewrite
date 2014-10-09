@@ -24,7 +24,7 @@ Installing
 
 1. If composer is not already installed, [do so](https://getcomposer.org/download/).
 2. Create a ``composer.json`` with the following (or similar) contents:
-```
+```json
 {
     "require": {
         "danslo/libraryrewrite": "dev-master"
@@ -41,7 +41,8 @@ Installing
     ]
 }
 ```
-3. Issue the ``composer install`` command.
+
+Finally, issue the ``composer install`` command.
 
 Registering rewrites
 --------------------
