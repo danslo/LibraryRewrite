@@ -65,7 +65,7 @@ Registering rewrites
 ```
 
 - Create a file in ``app/code/<YourCodePool>/<YourNamespace>/<YourModule>/lib/<PathToTheLibrary>``.
-- The contents of the class should itself live in global namseapce extend from the Magento namespace:
+- The contents of the class should itself live in global namespace and extend from the Magento namespace:
 
 ```php
 <?php
