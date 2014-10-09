@@ -2,7 +2,7 @@
     "name": "danslo/libraryrewrite",
     "license": "MIT",
     "type": "magento-module",
-    "description": "",
+    "description": "Allows you to rewrite Magento libraries without copying them entirely.",
     "authors": [
         {
             "name": "Daniel Sloof"
