@@ -14,6 +14,7 @@ How does it work?
 3. When you do, it will:
     - Wrap the class in a namespace.
     - Replace extends for that class to use the global namespace (to prevent the Magento autoloader from choking).
+    - Do the same for static property or class constant lookups (damn that Magento autoloader).
     - Stick this class in a temporary folder (currently ``/var/tmp/library_rewrite``).
     - Include the (namespaced) class.
     - Include your (non-namespaced) class.
