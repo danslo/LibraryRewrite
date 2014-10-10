@@ -134,7 +134,7 @@ class Danslo_LibraryRewrite_Model_Autoloader
         }, $classData);
 
         // The same goes for statics or constants, but not self.
-        $classData = preg_replace('/((?!(?:self))\w+::\w+)/', '\\\\${1}', $classData);
+        $classData = preg_replace('/(((?!self\b)\b\w+)::\w+)/', '\\\\${1}', $classData);
 
         return '<?php namespace ' . self::REWRITE_NAMESPACE . ';' . PHP_EOL . $classData;
     }
