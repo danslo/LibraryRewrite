@@ -1,2 +1,2 @@
-bootstrap.xml app/etc/modules/Danslo/LibraryRewrite.xml
+bootstrap.xml app/etc/modules/Danslo_LibraryRewrite.xml
 src           app/code/community/Danslo/LibraryRewrite/
