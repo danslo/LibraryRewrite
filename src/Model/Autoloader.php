@@ -110,7 +110,9 @@ class Danslo_LibraryRewrite_Model_Autoloader
      *
      * @param string $filePath
      *
-     * @todo I'm sure this can be a lot cleaner.
+     * @todo I'm not a fan of having to patch global lookups because the Magento
+     *       autoloader chokes on them. It's probably cleaner at this point to
+     *       patch their autoloader instead.
      *
      * @return string
      */
@@ -123,13 +125,16 @@ class Danslo_LibraryRewrite_Model_Autoloader
 
         // Class extends should look in the global namespace, or else we cause
         // the Varien Autoloader to choke.
-        $classData = preg_replace_callback('/(class\s+\w+)(\s+extends\s+)?(\w+)/s', function($matches) use($classData) {
+        $classData = preg_replace_callback('/(class\s+\w+)(\s+extends\s+([^{]+))?/s', function($matches) use(&$classData) {
             if (isset($matches[3])) {
                 return sprintf('%s extends %s', $matches[1], '\\' . $matches[3]);
             } else {
-                return $classData;
+                return $matches[1];
             }
         }, $classData);
+
+        // The same goes for statics or constants, but not self.
+        $classData = preg_replace('/((?!(?:self))\w+::\w+)/', '\\\\${1}', $classData);
 
         return '<?php namespace ' . self::REWRITE_NAMESPACE . ';' . PHP_EOL . $classData;
     }
