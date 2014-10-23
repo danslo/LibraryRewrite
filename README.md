@@ -29,11 +29,10 @@ Installing
 ```json
 {
     "require": {
-        "danslo/libraryrewrite": "dev-master"
+        "danslo/libraryrewrite": "~1.0.0"
     },
-    "minimum-stability": "dev",
     "extra": {
-        "magento-root-dir": "."
+        "magento-root-dir": "htdocs/"
     },
     "repositories": [
         {
