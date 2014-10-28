@@ -4,7 +4,7 @@
         <Danslo_LibraryRewrite>
             <active>true</active>
             <codePool>community</codePool>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </Danslo_LibraryRewrite>
     </modules>
 </config>
