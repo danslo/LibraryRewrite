@@ -148,7 +148,7 @@ class Danslo_LibraryRewrite_Model_Autoloader
      */
     protected function _getRewritePath($libraryHash)
     {
-        return $this->_getRewriteDirectory() . DS . $libraryHash;
+        return $this->_getRewriteDirectory() . DS . $libraryHash . '.php';
     }
 
     /**
