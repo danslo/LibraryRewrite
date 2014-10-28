@@ -2,9 +2,9 @@
 <config>
     <global>
         <models>
-            <extender>
+            <library_rewrite>
                 <class>Danslo_LibraryRewrite_Model</class>
-            </extender>
+            </library_rewrite>
         </models>
         <events>
             <resource_get_tablename>

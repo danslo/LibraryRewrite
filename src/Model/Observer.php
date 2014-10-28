@@ -21,7 +21,7 @@ class Danslo_LibraryRewrite_Model_Observer
         if (!self::$_addAutoloader) {
             return;
         }
-        Mage::getModel('extender/autoloader')->register();
+        Mage::getModel('library_rewrite/autoloader')->register();
         self::$_addAutoloader = false;
     }
 
