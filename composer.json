@@ -13,8 +13,8 @@
     },
     "repositories": [
         {
-            "type": "composer",
-            "url": "http://packages.firegento.com"
+            "type": "vcs",
+            "url": "https://github.com/Cotya/magento-composer-installer.git"
         }
     ]
 }
