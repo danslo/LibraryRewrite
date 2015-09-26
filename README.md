@@ -1,3 +1,8 @@
+WARNING: THIS IS A DEPRECATED EXPERIMENT
+========================================
+
+Please consider using [Danslo_Aop](https://github.com/danslo/Danslo_Aop) instead!
+
 Danslo_LibraryRewrite
 =====================
 
